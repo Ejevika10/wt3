@@ -1,16 +1,4 @@
 {
-    "name": "hp/wt_3",
-    "autoload": {
-        "psr-4": {
-            "Hp\\Wt3\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "loziuk",
-            "email": "loziukvika10@gmail.com"
-        }
-    ],
     "require": {
         "twig/twig": "^3.5"
     }
