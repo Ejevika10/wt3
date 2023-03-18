@@ -5,8 +5,8 @@ $loader = new \Twig\Loader\FilesystemLoader('templates');
 $twig = new \Twig\Environment($loader);
 
 $style = "css/Paintings.css";
-$content = 'index.html.twig';
-echo $twig->render("Paintings.html.twig", [
+$content = 'Paintings.html.twig';
+echo $twig->render("Base.html.twig", [
     'style' =>$style,
     'content' =>$content
 ]);
