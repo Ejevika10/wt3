@@ -2,113 +2,15 @@
         <h2>Галерея</h2>
     </div>
     <div class="content-wrapper">
-        <div class="artist" id="#mone">
-            <h2>Клод Моне</h2>
+        {% for card in gallery %}
+        <div class="artist" id="{{ card.id }}">
+            <h2>{{ card.name }}</h2>
+            {% for img in card.imgs %}
             <div class="textimg">
-                <img src="img/mone1.jpg">
-                <p>Клод Моне. Впечатление (1872)</p>
+                <img src="{{ img.src }}" alt="">
+                <p>{{ img.src_name }}</p>
             </div>
-            <div class="textimg">
-                <img src="img/mone2.jpg">
-                <p>Клод Моне. Водяные лилии и японский мост (1899)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/mone3.jpg">
-                <p>Клод Моне. Вокзал Сен-Лазар (1877)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/mone4.jpg">
-                <p>Клод Моне. Дама с зонтиком, повернувшаяся налево (1886)</p>
-            </div>
+            {% endfor %}
         </div>
-        <div class="artist" id="#mane">
-            <h2>Эдуард Мане</h2>
-            <div class="textimg">
-                <img src="img/mane1.jpg">
-                <p>Эдуард Мане. Завтрак на траве (1863)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/mane2.jpg">
-                <p>Эдуард Мане. Бар в «Фоли-Бержер» (1882)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/mane3.jpg">
-                <p>Эдуард Мане. Олимпия (1863)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/mane4.jpg">
-                <p>Эдуард Мане. Слива (1877)</p>
-            </div>
-        </div>
-        <div class="artist" id="#pissarro">
-            <h2>Камиль Писсарро</h2>
-            <div class="textimg">
-                <img src="img/pissarro1.jpg">
-                <p>Камиль Писсарро. Девочка с прутом (1881)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/pissarro2.jpg">
-                <p>Камиль Писсарро. Бульвар Монмартр в дождливую погоду (1897)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/pissarro3.jpg">
-                <p>Камиль Писсарро. Старая дорога из Аннери в Понтуаз. Заморозки (1873)</p>
-            </div>
-        </div>
-        <div class="artist" id="#renyar">
-            <h2>Огюст Ренуар</h2>
-            <div class="textimg">
-                <img src="img/renyar1.jpg">
-                <p>Огюст Ренуар. Завтрак гребцов (1880)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/renyar2.jpg">
-                <p>Огюст Ренуар. Портрет актрисы Жанны Самари (1877)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/renyar3.jpg">
-                <p>Огюст Ренуар. Лягушатник (1869)</p>
-            </div>
-        </div>
-        <div class="artist" id="#morizo">
-            <h2>Берта Моризо</h2>
-            <div class="textimg">
-                <img src="img/morizo1.jpg">
-                <p>Берта Моризо. Женщина у туалета (1875)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/morizo2.jpg">
-                <p>Берта Моризо. Le Berceau (1872)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/morizo3.jpg">
-                <p>Берта Моризо. В столовой (1869)</p>
-            </div>
-        </div>
-        <div class="artist" id="#dega">
-            <h2>Эдгар Дега</h2>
-            <div class="textimg">
-                <img src="img/dega1.jpg">
-                <p>Эдгар Дега. Абсент (1876)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/dega2.jpg">
-                <p>Эдгар Дега. Голубые танцовщицы (1898)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/dega3.jpg">
-                <p>Эдгар Дега. Танцевальный класс (1874)</p>
-            </div>
-        </div>
-        <div class="artist" id="#sisley">
-            <h2>Альфред Сислей</h2>
-            <div class="textimg">
-                <img src="img/sisley1.webp">
-                <p>Альфред Сислей. Плотина в Молси, Хэмптон Корт (1874)</p>
-            </div>
-            <div class="textimg">
-                <img src="img/sisley2.jpg">
-                <p>Альфред Сислей. Вид на Сен-Мамес (1880)</p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
