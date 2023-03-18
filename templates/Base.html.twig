@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href={{ style }}>
+<body>
+{% include 'header.html.twig' %}
+<main>
+    {% include 'aside.html.twig' %}
+    {% include content %}
+    {% include 'others.html.twig' %}
+    {% include 'subscribeform.html.twig' %}
+</main>
+{% include 'footer.html.twig' %}
+</body>
+</html>
