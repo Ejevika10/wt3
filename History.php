@@ -6,7 +6,9 @@ $twig = new \Twig\Environment($loader);
 
 $style = "css/History.css";
 $content = 'History.html.twig';
+$title = 'History';
 echo $twig->render("Base.html.twig", [
     'style' =>$style,
-    'content' =>$content
+    'content' =>$content,
+    'title' => $title
 ]);

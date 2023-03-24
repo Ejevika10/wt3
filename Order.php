@@ -6,7 +6,10 @@ $twig = new \Twig\Environment($loader);
 
 $style = "css/Order.css";
 $content = 'Order.html.twig';
+$title = 'Order';
+
 echo $twig->render("Base.html.twig", [
     'style' =>$style,
-    'content' =>$content
+    'content' =>$content,
+    'title' => $title
 ]);

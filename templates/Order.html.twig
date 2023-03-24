@@ -1,22 +1,22 @@
   <div class="pagename">
     <h2>Заказать репродукцию</h2>
   </div>
-  <div class="order_form" id="form">
+  <form class="order_form" id="form" action="../orderCheck.php" method="post">
     <div>
       <h2>Оформи заказ сейчас</h2>
       <div class="order_input">
-        <input type="text" class="ord_text" placeholder="Ваш телефон" />
-        <input type="email" class="ord_text" placeholder="Ваш email" />
+        <input name = "telephone" type="text" class="ord_text" placeholder="Ваш телефон" />
+        <input name = "email" type="email" class="ord_text" placeholder="Ваш email" />
         <input type="button" class="ord_button" value="Загрузить фото" />
-        <input type="text" class="ord_text_h" placeholder="Опишите свои пожелания" />
-        <input type="button" class="ord_button" value="Отправить заявку" />
+        <input name = "message" type="text" class="ord_text_h" placeholder="Опишите свои пожелания" />
+        <input type="submit" class="ord_button" value="Отправить заявку" />
       </div>
     </div>
-  </div>
+  </form>
   <div class="content-wrapper">
     <p class="content-info">Живопись пробуждает фантазию, окрыляет безграничными возможностями для совершенствования человека. Поэтому ценится издавна мыслителями, философами, меценатами, высокопоставленными особами, которые вдохновлялись красотой и необычайностью стиля исполнения. Великие живописные гении дарили человечеству частичку творческой души при помощи своих произведений, поэтому не зря их картины называются вкладом в мировую культуру. Результаты их труда оцениваются дорого, поэтому они не «по карману» каждому.</p>
     <p class="content-info"> Благодаря современным возможностям, мы можем воссоздать любую картину по вашему желанию. Картина будет изготовлена на хлопковом холсте при помощи пигментных красок, которые дают возможность воплотить цветовые оттенки, авторские приемы и игру света, примененные рукой самого мастера.</p>
-    <a type="button" class="additional-button" href="Paintings.html">Перейти к каталогу</a>
+    <a type="button" class="additional-button" href="Paintings.php">Перейти к каталогу</a>
   </div>
 
   <div class="examples">

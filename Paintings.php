@@ -6,6 +6,7 @@ $twig = new \Twig\Environment($loader);
 
 $style = "css/Paintings.css";
 $content = 'Paintings.html.twig';
+$title = 'Paintings';
 
 $gallery = [
     [
@@ -123,5 +124,6 @@ $gallery = [
 echo $twig->render("Base.html.twig", [
     'style' =>$style,
     'content' =>$content,
-    'gallery' => $gallery
+    'gallery' => $gallery,
+    'title' => $title
 ]);

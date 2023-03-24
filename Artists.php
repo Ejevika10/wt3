@@ -6,6 +6,8 @@ $twig = new \Twig\Environment($loader);
 
 $style = "css/Artists.css";
 $content = 'Artists.html.twig';
+$title = 'Artists';
+
 
 $artists = [
     [
@@ -103,5 +105,6 @@ $artists = [
 echo $twig->render("Base.html.twig", [
     'style' =>$style,
     'content' =>$content,
-    'artists' =>$artists
+    'artists' =>$artists,
+    'title' => $title
 ]);
