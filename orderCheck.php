@@ -12,13 +12,12 @@ function clean($value = "") {
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $file = 'order.txt';
-    $pattern_email = '/\w+@\w+\.\w+/';
+    $pattern_email = '/(^@)\w+@\w+(\.\w+)+/';
     $pattern_telephone = '/((8[\- ]?\(?\d{3}\)?)|(\+375[\- ]?\(?\d{2}\)?))([\- ]?\d){7}$/';
     $email = $_POST['email'];
     $telephone = $_POST['telephone'];
     $message = $_POST['message'];
-    $message = preg_replace('/(https?:\/\/(?!bsuir\.by)\S+)/', '#Внешние ссылки запрещены#', $message);
-
+    $message = preg_replace('/(https?:\/\/\S*(?!bsuir\.by)\S+)/', '#Внешние ссылки запрещены#', $message);
     $email = clean($email);
     $telephone = clean($telephone);
     $message = clean($message);
