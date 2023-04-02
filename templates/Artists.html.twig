@@ -5,30 +5,30 @@
     <div class="content-wrapper">
         {% for artist in artists %}
             <div class="artist">
-                <h2>{{ artist.name }} {{ artist.year }}</h2>
+                <h2>{{ artist['name'] }} {{ artist['year'] }}</h2>
                 <div class="artistimg">
-                    <img src={{ artist.portrait }} height="500px">
-                    <p>{{ artist.portrait_name}}</p>
+                    <img src={{ artist['portrait'] }} height="500px">
+                    <p>{{ artist['portrait_name']}}</p>
                 </div>
-                <p> {{ artist.info }}</p>
+                <p> {{ artist['info'] }}</p>
                 <ul>
                     <li>
-                        <p><b>Материальное положение :</b> {{ artist.first }}</p>
+                        <p><b>Материальное положение :</b> {{ artist['first'] }}</p>
                     </li>
                     <li>
-                        <p><b>Любимые темы :</b> {{ artist.second }}</p>
+                        <p><b>Любимые темы :</b> {{ artist['second'] }}</p>
                     </li>
                     <li>
-                        <p><b>Близкие отношения :</b> {{ artist.third }}</p>
+                        <p><b>Близкие отношения :</b> {{ artist['third'] }}</p>
                     </li>
                     <li>
-                        <p><b>Место паломничества :</b> {{ artist.fourth }}</p>
+                        <p><b>Место паломничества :</b> {{ artist['fourth'] }}</p>
                     </li>
                     <li>
-                        <p><b>Цитата :</b> {{ artist.fifth }}</p>
+                        <p><b>Цитата :</b> {{ artist['fifth'] }}</p>
                     </li>
                 </ul>
-                <a type="button" href={{ artist.gallery }} class="artist_button">Смотреть работы</a>
+                <a type="button" href={{ 'Paintings.php#' ~ artist['gallery']}} class="artist_button">Смотреть работы</a>
             </div>
         {% endfor %}
     </div>

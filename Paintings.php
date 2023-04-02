@@ -8,7 +8,29 @@ $style = "css/Paintings.css";
 $content = 'Paintings.html.twig';
 $title = 'Paintings';
 
-$gallery = [
+
+
+$dbh = new PDO("mysql:host=localhost;dbname=impression", "root", "1234");
+$sql1 = "SELECT * FROM artists";
+$sql2 = "SELECT * FROM gallery";
+
+$gallery = array();
+
+$result1 = $dbh->query($sql1);
+while($row1 = $result1->fetch()){
+    $imgs = array();
+    $result2 = $dbh->query($sql2);
+    while($row2 = $result2->fetch()){
+        if($row2['id_index'] == $row1['id_index'])
+            $imgs[] = $row2;
+    }
+    $gallery[] = ['id' =>$row1['gallery'],'name' =>$row1['name'],'imgs' =>$imgs];
+}
+
+
+
+
+/*$gallery = [
     [
         'id' => "#mone",
         'name' => "Клод Моне",
@@ -119,7 +141,7 @@ $gallery = [
         ]
     ]
 
-];
+];*/
 
 echo $twig->render("Base.html.twig", [
     'style' =>$style,

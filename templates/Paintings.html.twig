@@ -7,8 +7,8 @@
             <h2>{{ card.name }}</h2>
             {% for img in card.imgs %}
             <div class="textimg">
-                <img src="{{ img.src }}" alt="">
-                <p>{{ img.src_name }}</p>
+                <img src="{{ img['src'] }}" alt="">
+                <p>{{ img['src_name'] }}</p>
             </div>
             {% endfor %}
         </div>

@@ -8,8 +8,16 @@ $style = "css/Artists.css";
 $content = 'Artists.html.twig';
 $title = 'Artists';
 
+$artists = array();
+$dbh = new PDO("mysql:host=localhost;dbname=impression", "root", "1234");
+$sql = "SELECT * FROM artists";
+$result = $dbh->query($sql);
+while($row = $result->fetch()){
+    $artists[] = $row;
+}
 
-$artists = [
+
+/*$artists = [
     [
         'name' => "Эдуард Мане",
         'year' => "(1832-1883)",
@@ -100,7 +108,7 @@ $artists = [
         'fifth' => ' "Любая картина показывает то, во что художник влюбился." ',
         'gallery' => "Paintings.php##sisley"
     ]
-];
+];*/
 
 echo $twig->render("Base.html.twig", [
     'style' =>$style,
