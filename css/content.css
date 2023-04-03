@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url(../css/fonts/Avenir-Medium.ttf);
+}
+@font-face {
+    font-family: 'Resphekt';
+    src: url(../css/fonts/esphekt.ttf);
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: url(../css/fonts/comfortaa.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+main{
+    float:right;
+    width: 90%;
+    right: 0;
+    left:0;
+}
+.pagename{
+    height: 150px;
+    background-image: url(../img/try1.jpg);
+    background-size:cover;
+    display: flex;
+}
+.pagename>h2{
+    margin: auto;
+    color: white;
+    font-family: 'Resphekt', serif;
+    font-weight: lighter;
+    font-size: 90px;
+}
+
+.content-wrapper{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.content-info{
+    color: #333333;
+    font-size: 20px;
+    font-family: 'Comfortaa', serif;
+    font-weight: 200;
+    line-height: 2;
+}
+
+.textimg{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.textimg>p{
+    margin-top: 20px;
+    color: blueviolet;
+    font-size: 16px;
+    font-family: 'Comfortaa', serif;
+}
+.textimg img{
+    border-radius: 10px;
+}
+@media (max-width: 1024px) {
+
+    main{
+        width: 100%;!important;
+    }
+}
