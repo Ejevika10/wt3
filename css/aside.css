@@ -9,8 +9,9 @@ aside {
     left: 0;
     margin-right: 0;
     display: flex;!important
-flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
+    z-index: 11;
 }
 
 .nav{

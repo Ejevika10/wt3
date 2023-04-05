@@ -1,5 +1,7 @@
 .artist{
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .artist>h2{
     color: #333333;
@@ -64,4 +66,16 @@
     border:2px solid blueviolet;
     color: white;
     font-weight: lighter;
+}
+@media (max-width: 1024px) {
+    .artistimg{
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        float: none;
+    }
+    .artist_button{
+        margin: auto;
+        margin-top: 15px;
+    }
 }

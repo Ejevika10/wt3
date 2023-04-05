@@ -127,4 +127,9 @@
     margin-bottom: 0;
     border-radius:10px;
 }
+@media (max-width: 1024px) {
+    .examples div{
+        flex-direction: column;
+    }
 
+}
