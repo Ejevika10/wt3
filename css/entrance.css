@@ -1,0 +1,81 @@
+.order_form{
+    width: 70%;
+    padding: 30px 15px 30px 15px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /*background-color: #c3b4ff;*/
+    background-image: url(../img/form1.jpg);;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    border-radius:10px;
+}
+.order_form>div{
+    height: 70%;
+    width: 50%;
+    margin:auto;
+    margin-right: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.order_form>div>h2{
+    padding:10px;
+    color: #333333;
+    font-size: 30px;
+    font-family: 'Comfortaa', serif;
+    font-weight: bold;
+}
+.order_input{
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ord_text{
+    background-color: inherit;
+    max-width: 100%;
+    padding: 10px;
+    border-radius:10px;
+    border:1px solid #333;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin:10px 10px;
+    text-decoration-color: blueviolet;
+    font-family:'Comfortaa';
+}
+.ord_text_h{
+    background-color: inherit;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-top:50px;
+    padding-bottom: 50px;
+    border-radius:10px;
+    border:1px solid #333;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin:10px 10px;
+    text-decoration-color: blueviolet;
+    font-family:'Comfortaa';
+}
+.ord_button{
+    background-color: inherit;
+    max-width: 100%;
+    padding: 10px;
+    border-radius:10px;
+    border:2px solid #333;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin:10px 10px;
+    font-family:'Comfortaa';
+    font-weight: bold;
+}
+.ord_button:hover {
+    background-color: blueviolet;
+    border:2px solid blueviolet;
+    color: white;
+    font-weight: lighter;
+}
+.first_vizit{
+    margin: auto;
+    font-family:'Comfortaa';
+}
+

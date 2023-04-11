@@ -15,6 +15,11 @@ $result = $dbh->query($sql);
 while($row = $result->fetch()){
     $artists[] = $row;
 }
+if (isset($_COOKIE['is_login']) && ($_COOKIE['is_login'] == 'true'))
+{$is_login = 'true';}
+else{
+    $is_login = 'false';
+}
 
 
 /*$artists = [
@@ -114,5 +119,6 @@ echo $twig->render("Base.html.twig", [
     'style' =>$style,
     'content' =>$content,
     'artists' =>$artists,
-    'title' => $title
+    'title' => $title,
+    'is_login' => $is_login
 ]);

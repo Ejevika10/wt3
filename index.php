@@ -8,8 +8,16 @@ $style = "css/Main.css";
 $content = 'index.html.twig';
 $title ='impression';
 
+if (isset($_COOKIE['is_login']) && ($_COOKIE['is_login'] == 'true'))
+    {$is_login = 'true';}
+else{
+    $is_login = 'false';
+}
+
+
 echo $twig->render("Base.html.twig", [
     'style' =>$style,
     'content' =>$content,
-    'title' => $title
+    'title' => $title,
+    'is_login' => $is_login
 ]);

@@ -30,12 +30,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit();
             }
             else
-                echo "Введенный номер телефона некорректен";
+                echo "<script>alert(\"Номер телефона введен некоректно.\");</script>";
         }
         else
-            echo "Введенный адрес некорректен";
+            echo "<script>alert(\"Электронный адрес введен некоректно.\");</script>";
     }
-    else
-        echo "Заполните форму";
+    else{
+        echo "<script>alert(\"Заполните форму.\");window.location='index.php';</script>";
+        //header("Location: Order.php");
+    }
+
+
 }
 ?>

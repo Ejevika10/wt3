@@ -26,6 +26,12 @@ while($row1 = $result1->fetch()){
     }
     $gallery[] = ['id' =>$row1['gallery'],'name' =>$row1['name'],'imgs' =>$imgs];
 }
+if (isset($_COOKIE['is_login']) && ($_COOKIE['is_login'] == 'true'))
+{$is_login = 'true';}
+else{
+    $is_login = 'false';
+}
+
 
 
 
@@ -147,5 +153,6 @@ echo $twig->render("Base.html.twig", [
     'style' =>$style,
     'content' =>$content,
     'gallery' => $gallery,
-    'title' => $title
+    'title' => $title,
+    'is_login' => $is_login
 ]);

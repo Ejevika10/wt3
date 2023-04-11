@@ -3,6 +3,9 @@
     <div>
         <h1>impression</h1>
         <nav>
+            {% if is_login == 'false' %}
+                <a type="button" id="login_btn" class="authorization-button" href='../entrance.php'>Войти</a>
+            {% endif %}
             <a href="https://t.me/ejevika">
                 <img src="img/tele1.png">
             </a>

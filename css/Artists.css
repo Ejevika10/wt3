@@ -1,7 +1,5 @@
 .artist{
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
 }
 .artist>h2{
     color: #333333;
@@ -77,5 +75,9 @@
     .artist_button{
         margin: auto;
         margin-top: 15px;
+    }
+    .artist{
+        display: flex;
+        flex-direction: column;
     }
 }
