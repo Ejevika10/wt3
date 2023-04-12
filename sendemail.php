@@ -27,17 +27,11 @@ function sendemail($fromemail, $fromname, $toemail, $toname, $subject, $message)
                 </html></body>");
 
     $mail->addAddress($toemail, $toname); // добавляем получателя и отправляем
-    if (!$mail->send()) { // если произошла ошибка при отправке
-        $return = $toname." | ".str_replace("@", "&#64;", $toemail)." ".$mail->ErrorInfo."  | ".date("d-m-Y в H:i:s"); // возвращаем сообщение об ошибке
-    } else {
-        $return = $toname." | ".str_replace("@", "&#64;", $toemail)." | ".date("d-m-Y в H:i:s");
-    } // если сообщение отправлено удачно- возвращаем время отправки
 
     $mail->clearAddresses();
     $mail->clearCustomHeaders();
     $mail->clearAttachments();
     $mail->clearReplyTos(); // чистим все заголовки
-return $return;
 }
 ?>
 <?php

@@ -34,10 +34,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             sendemail("impression1928@yandex.ru", "impression", $email, "loziuk vika", "impression", "Проверьте обновления!");
             exit();
         }
-        else
-            "<script>alert(\"Электронный адрес введен некоректно.\");</script>";
+        else {
+            echo "<script>alert(\"Электронный адрес введен неверно.\");window.location = 'index.php';</script>";
+        }
     }
-    else
-        echo "<script>alert(\"Введите адрес.\");</script>";
+    else {
+        echo "<script>alert(\"Введите адрес.\");window.location = 'index.php';</script>";
+    }
 }
 ?>

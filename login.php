@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     else
     {
-        "<script>alert(\"Логин или пароль введены неверно.\");</script>";
+        echo "<script>alert(\"Логин или пароль введены неверно.\");window.location='entrance.php';</script>";
     }
 }
 ?>

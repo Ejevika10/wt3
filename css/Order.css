@@ -1,3 +1,8 @@
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
 
 
 .order_form{
@@ -61,6 +66,7 @@
 }
 .ord_button{
     background-color: inherit;
+    text-align: center;
     max-width: 100%;
     padding: 10px;
     border-radius:10px;
@@ -69,6 +75,7 @@
     margin:10px 10px;
     font-family:'Comfortaa';
     font-weight: bold;
+    font-size: 15px;
 }
 .ord_button:hover {
     background-color: blueviolet;
@@ -101,6 +108,30 @@
     font-weight: lighter;
 }
 
+.content-wrapper>h2{
+    color: #333333;
+    font-size: 30px;
+    font-family: 'Comfortaa', serif;
+    font-weight: bold;
+}
+.my_order{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.my_order>img{
+    margin:20px;
+    border-radius:10px;
+    float: left;
+}
+.my_order>p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #333333;
+    font-size: 20px;
+    font-family: 'Comfortaa', serif;
+    font-weight: 200;
+    line-height: 1.3;
+}
 .examples{
     display: flex;
     flex-direction: column;

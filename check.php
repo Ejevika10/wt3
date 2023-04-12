@@ -34,6 +34,6 @@ if (isset($_COOKIE['id']) and isset($_COOKIE['hash']))
 }
 else
 {
-    print "Включите куки";
+    "<script>alert(\"Что-то пошло не так.\");</script>";
 }
 ?>

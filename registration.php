@@ -5,28 +5,26 @@ $dbh = new PDO("mysql:host=localhost;dbname=impression", "root", "1234");
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $err = [];
+    $err = 0;
 
     // проверям логин
     if (!preg_match('/\w+@\w+\.\w+/', $_POST['login'])) {
-        $err[] = "Логин может состоять только из букв английского алфавита и цифр";
+        $err++;
+        echo "<script>alert(\"Логин может состоять только из букв английского алфавита и цифр.\");window.location='authorization.php';</script>";
     }
-
-    if (strlen($_POST['login']) < 3 or strlen($_POST['login']) > 30) {
-        $err[] = "Логин должен быть не меньше 3-х символов и не больше 30";
-    }
-
     // проверяем, не сущестует ли пользователя с таким именем
     $sql = "SELECT * FROM authorization";
     $result = $dbh->query($sql);
 
     while ($row = $result->fetch()) {
-        if ($row['user_login'] == $_POST['login'])
-            $err[] = "Пользователь с таким логином уже существует в базе данных";
+        if ($row['user_login'] == $_POST['login']) {
+            $err++;
+            echo "<script>alert(\"Пользователь с таким логином уже существует в базе данных.\");window.location='authorization.php';</script>";
+        }
     }
 
     // Если нет ошибок, то добавляем в БД нового пользователя
-    if (count($err) == 0) {
+    if ($err == 0) {
 
         $login = $_POST['login'];
 
@@ -41,9 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ];
         $stmt = $dbh->prepare($query);
         $stmt->execute($params);
-        header("Location: Order.php");
-        exit();
+        echo "<script>alert(\"Вы зарегестрированы.\");window.location='entrance.php';</script>";
+
     } else {
-        "<script>alert(\"Что-то пошло не так.\");</script>";
+        echo "<script>alert(\"Что-то пошло не так.\");window.location='authorization.php';</script>";
+
     }
 }

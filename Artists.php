@@ -15,6 +15,8 @@ $result = $dbh->query($sql);
 while($row = $result->fetch()){
     $artists[] = $row;
 }
+
+
 if (isset($_COOKIE['is_login']) && ($_COOKIE['is_login'] == 'true'))
 {$is_login = 'true';}
 else{

@@ -1,13 +1,14 @@
-  <div class="pagename">
+<div class="pagename">
     <h2>Заказать репродукцию</h2>
   </div>
-  <form class="order_form" id="form" action="../orderCheck.php" method="post">
+  <form class="order_form" id="form" action="../orderCheck.php" method="post" enctype="multipart/form-data">
     <div>
       <h2>Оформи заказ сейчас</h2>
       <div class="order_input">
         <input name = "telephone" type="text" class="ord_text" placeholder="Ваш телефон" />
         <input name = "email" type="email" class="ord_text" placeholder="Ваш email" />
-        <input type="button" class="ord_button" value="Загрузить фото" />
+        <input name="file" type="file" class="input__file" id="input__file"/>
+        <label class="ord_button"for="input__file">Загрузить фото</label>
         <input name = "message" type="text" class="ord_text_h" placeholder="Опишите свои пожелания" />
         <input type="submit" class="ord_button" value="Отправить заявку" />
       </div>
@@ -18,18 +19,31 @@
     <p class="content-info"> Благодаря современным возможностям, мы можем воссоздать любую картину по вашему желанию. Картина будет изготовлена на хлопковом холсте при помощи пигментных красок, которые дают возможность воплотить цветовые оттенки, авторские приемы и игру света, примененные рукой самого мастера.</p>
     <a type="button" class="additional-button" href="Paintings.php">Перейти к каталогу</a>
   </div>
+  {% if is_login == 'false' %}
+    <div class="examples">
+      <h2>Примеры работ</h2>
+      <div>
+        <img src="img/ord_1img.jpg" width="350px">
+        <img src="img/ord_2img.jpg" width="350px">
+        <img src="img/ord_3img.jpg" width="350px">
+      </div>
+      <div>
+        <img src="img/ord_4img.jpg" width="350px">
+        <img src="img/ord_5img.jpg" width="350px">
+        <img src="img/ord_6img.jpg" width="350px">
+      </div>
+      <a type="button" class="additional-button" href="#form">Оформить заказ</a>
+    </div>
+  {% elseif is_login == 'true'%}
+    <div class="content-wrapper">
+      <h2>Мои заказы</h2>
+      {% for order in myOrders %}
+        <div class="my_order">
+          <img src='uploaded_files/{{ order['img'] }}' width="350px">
+          <p><b>Описание: </b>{{ order['description'] }}</p>
+          <p><b>Статус заказа: </b> в производстве </p>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
 
-  <div class="examples">
-    <h2>Примеры работ</h2>
-    <div>
-      <img src="img/ord_1img.jpg" width="350px">
-      <img src="img/ord_2img.jpg" width="350px">
-      <img src="img/ord_3img.jpg" width="350px">
-    </div>
-    <div>
-      <img src="img/ord_4img.jpg" width="350px">
-      <img src="img/ord_5img.jpg" width="350px">
-      <img src="img/ord_6img.jpg" width="350px">
-    </div>
-    <a type="button" class="additional-button" href="#form">Оформить заказ</a>
-  </div>
